@@ -1,0 +1,70 @@
+$c1-100: #181818;
+$c1-200: #191919;
+$c2-100: #b61984;
+$cwhite: #ffffff;
+
+$text-sx: 0.75rem;
+$text-sm: 0.875rem;
+$text-base: 1rem;
+$text-md: 1.25rem;
+$text-lg: 1.5rem;
+$text-xl: 2rem;
+$text-2xl: 3rem;
+$text-3xl: 4rem;
+$text-4xl: 5rem;
+
+$text-light: 300;
+$text-regular: 400;
+$text-semiBold: 600;
+$text-blod: 700;
+
+@mixin Text($fs: $text-base, $fw: $text-regular, $c: $c1-100) {
+  font-size: $fs;
+  font-weight: $fw;
+  color: $c;
+}
+a {
+  text-decoration: none;
+}
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.html {
+  font-size: 16px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+// Responsive
+
+@mixin desktop-lg {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin tablet-md {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin mobile-sm {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mobile-xs {
+  @media (max-width: 576px) {
+    @content;
+  }
+}

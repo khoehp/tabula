@@ -1,0 +1,286 @@
+@import "../scss/mixin/mixin";
+@import "../header/header";
+@import "../footer/footer.scss";
+
+
+// Carousel
+.carousel {
+  padding-bottom: 50px;
+  .bg-carousel {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+  .container {
+    .row {
+      justify-content: center;
+      align-items: center;
+      .carousel-left {
+        span {
+          @include Text($text-md, $text-semiBold, $c2-100);
+        }
+        p {
+          @include Text(3.3rem, $text-blod, $c1-200);
+        }
+      }
+      .carousel-right {
+        img {
+          width: 100%;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+// Service
+.service {
+  padding-top: 20px;
+  position: relative;
+  background-color: #dcd1f0;
+  z-index: 0;
+  .row {
+    .col {
+      .item {
+        width: 100%;
+        // margin-bottom: 16px;
+        border-radius: 10px;
+        transition: all 0.5s;
+        z-index: 3;
+        .top {
+          overflow: hidden;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+          display: block;
+          overflow: hidden;
+          img {
+            display: block;
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            transition: all 0.5s;
+            &:hover {
+              transform: scale(1.05);
+            }
+          }
+        }
+
+        .bottom {
+          background-color: #ffffff;
+          text-align: center;
+          padding: 20px 30px;
+          margin-bottom: 24px;
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+
+          h3 {
+            @include Text($text-sm, $text-semiBold, $c2-100);
+          }
+
+          span {
+            @include Text($text-md, $text-blod, $c1-200);
+            margin-bottom: 16px;
+            display: block;
+          }
+
+          p {
+            @include Text(0.9rem, $text-regular, $c1-100);
+          }
+        }
+
+        &:hover {
+          box-shadow: 2px 6px 16px -6px rgba(0, 0, 0, 0.78);
+        }
+      }
+    }
+  }
+
+  .bg-service {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -10;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+}
+.post {
+  position: relative;
+  background-color: #ffffff;
+  padding-top: 60px;
+  z-index: 0;
+  .container {
+    // margin: 0 60px;
+    // z-index: 10;
+    .row {
+      padding: 0 90px 0;
+      // z-index: 10;
+      .col {
+        align-items: center;
+        z-index: 10;
+        .item-left {
+          padding: 0 20px;
+          width: 100%;
+          margin: 40px 0;
+
+          img {
+            width: 100%;
+            display: block;
+          }
+        }
+        .item-right {
+          // padding: 0 25px;
+          margin: 40px 0;
+          border-radius: 10px;
+          box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 20%);
+          overflow: hidden;
+          .content {
+            // border-radius: 10px;
+            background-color: rgba(255, 255, 255, 1);
+            .inner {
+              margin: 0 20px;
+              // border-radius: 10px;
+              h2 {
+                text-align: center;
+                padding-top: 40px;
+                padding-bottom: 50px;
+                @include Text(2.2rem, $text-blod, $c1-200);
+                // @include tablet-md {
+                //   font-size: 35px;
+                // }
+                // @include mobile-xs {
+                //   font-size: 25px;
+                // }
+                @include tablet-md {
+                  color:  red;
+                }
+                @include mobile-xs {
+                  color: red;
+                }
+              }
+              .btContact {
+                .btContactRow {
+                  display: flex;
+                  flex-wrap: wrap;
+                  padding-bottom: 1rem;
+                  .icon {
+                    position: absolute;
+                    top: 11px;
+                    left: 11px;
+                    color: $c2-100;
+                  }
+                  .name {
+                    width: 50%;
+                    padding-right: 1rem;
+                    position: relative;
+                    flex: 1 0 50%;
+                    .name-text {
+                      input {
+                        border-radius: 50px;
+                        width: 100%;
+                        border: 1px solid rgba(0, 0, 0, 0.1);
+                        padding: 10px 35px;
+                      }
+                    }
+                  }
+                  .email {
+                    width: 50%;
+                    position: relative;
+                    .email-text {
+                      top: 1px;
+                      input {
+                        border-radius: 50px;
+                        width: 100%;
+                        border: 1px solid rgba(0, 0, 0, 0.1);
+                        padding: 10px 0px;
+                      }
+                    }
+                  }
+                  .select {
+                    position: relative;
+                    width: 100%;
+                    .select-form {
+                      border-radius: 50px;
+                      width: 100%;
+                      border: 1px solid rgba(0, 0, 0, 0.1);
+                      padding: 10px 35px;
+                    }
+                  }
+                  .messager {
+                    width: 100%;
+                    position: relative;
+                    // flex: 1 0 100%;
+                    .messager-text {
+                      display: block;
+                      .textarea {
+                        width: 100%;
+                        border-radius: 20px;
+                        height: 90px;
+                        border: 1px solid rgba(0, 0, 0, 0.1);
+                        padding: 10px 35px;
+                        display: block;
+                        // position: absolute;
+                      }
+                    }
+                  }
+                  .btn {
+                    margin-top: 20px;
+                    margin-bottom: 40px;
+                    button {
+                      @include Text($text-sm, $text-semiBold, $c2-100);
+                      padding: 10px 50px;
+                      border-radius: 50px;
+                      border: 1px solid;
+                      &:hover {
+                        background-color: #ffffff;
+                        color: $c2-100;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      @include tablet-md {
+        padding: 0 45px;
+      }
+      @include mobile-xs {
+        padding: 0;
+      }
+    }
+  }
+
+  .bg-post {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+    z-index: -10;
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+

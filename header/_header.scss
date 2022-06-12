@@ -1,0 +1,97 @@
+.header {
+    padding-top: 0.3rem;
+    background-color: transparent;
+    .bg-header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: block;
+  
+      img {
+        width: 100%;
+      }
+    }
+    .container {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+  
+      .logo {
+        cursor: pointer;
+  
+        img {
+          width: 100%;
+  
+          @include mobile-sm {
+            width: 80%;
+          }
+        }
+      }
+      .navbar {
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .nav-left {
+          width: 60%;
+          display: flex;
+          justify-content: space-between;
+          a {
+            @include Text($text-sx, $text-semiBold, $c1-100);
+            &:hover {
+              cursor: pointer;
+              color: $c2-100;
+            }
+          }
+        }
+        .nav-right {
+          display: flex;
+          width: 35%;
+          justify-content: space-between;
+          align-items: center;
+          .btn {
+            border-radius: 50px;
+            @include Text($text-sm, $text-semiBold, $cwhite);
+            background-color: $c2-100;
+            border-color: $c2-100;
+            padding: 0.7rem 1.2rem;
+            &:hover {
+              color: $c2-100;
+              background-color: $cwhite;
+              box-shadow: 0 0 0 1px #b61984 inset;
+            }
+  
+            @include tablet-md {
+              // display: none;
+            }
+          }
+          a {
+            color: $c1-200;
+            &:hover {
+              color: $c2-100;
+            }
+          }
+  
+          @include tablet-md {
+            width: 20%;
+          }
+        }
+  
+        @include tablet-md {
+          justify-content: space-around;
+        }
+  
+        @include mobile-sm {
+          display: none;
+        }
+      }
+    }
+    // Responsive
+    @include tablet-md {
+    }
+  }
